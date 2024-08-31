@@ -44,7 +44,7 @@ body {
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
 				    
-                    <a class="navbar-brand" href="TelaHome.php">
+                    <a class="navbar-brand" href="<?=HOME?>Home">
                         <div class="logo">On<span>Life</span></div>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,10 +52,10 @@ body {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="TelaCadCompanhia.php">Sobre nós</a></li>
-                            <li class="nav-item"><a class="nav-link" href="TelaContato.php">Contato</a></li>
-                            <li class="nav-item"><a class="nav-link" href="TelaLogin.php">Logar</a></li>
-                            <li class="nav-item"><a class="nav-link" href="TelaCadastro.php">Cadastrar</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?=HOME?>Sobre">Sobre nós</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?=HOME?>Contato">Contato</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?=HOME?>Login">Logar</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?=HOME?>Contato">Cadastrar</a></li>
                         </ul>
                     </div>
                 </div>
