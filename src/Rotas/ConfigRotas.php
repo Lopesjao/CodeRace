@@ -4,8 +4,10 @@
     Rotas::add('/', 'View/Teste.php');
     Rotas::add('/Home', 'View/Home.php');
 
+
     Rotas::add('/Login', 'View/TelaLogin.php');
     Rotas::add('/Cadastro', 'View/TelaCadastro.php');
+    Rotas::add('/Questionario', 'View/TelaQuestionario.php');
     Rotas::add('/Sair', 'View/TelaSair.php');
 
     Rotas::add('/Perfil', 'View/TelaPerfil.php');
