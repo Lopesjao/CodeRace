@@ -2,8 +2,15 @@
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include_once __DIR__ .'/../Model/user.php';
-    
-    $user = new $user();
+    include_once __DIR__ .'/../Controller/DAOUser.php';
+    $user = new User();
+    $daouser = new DAOUser();
+
+    $user ->setNome($_POST['nome']);
+    $user ->setEmail($_POST['email']);
+    $user ->setSenha($_POST['senha']);
+    $user ->setDataNasc($_POST['dataNasc']);
+
 
 }
 

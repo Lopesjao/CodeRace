@@ -22,7 +22,7 @@
                 <label >Senha:</label><br>
                 <input type="password" id="senha" name="senha" required><br>
                 <label >Data Nascimento:</label><br>
-                <input type="text" id="dataNasc" name="cidade"><br>
+                <input type="date" id="dataNasc" name="cidade"><br>
                 <input href="TelaQuestionario.php" type="submit" value="Cadastrar"> <!-- Arrumar A rota  -->
             </form>
         </div>
