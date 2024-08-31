@@ -1,5 +1,8 @@
 <?php
 include_once __DIR__ . '/../Rotas/Constantes.php';
+include_once __DIR__ . '/../Conexao/Conexao.php';
+include_once __DIR__ . '/../Model/user.php';
+include_once __DIR__ . '/../Controller/DAOUser.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = new User();
@@ -11,43 +14,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user->setSenha($_POST['senha']);
     $user->setDataNasc($_POST['dataNasc']);
 
-    $count;
-    $count + $_POST['celular'];
-    $count + $_POST['tv'];
-    $count + $_POST['pc'];
-    $count + $_POST['game'];
-
-    $tipograu;
-
-    if($count <= 20 ){
-        $tipograu = "Baixo";
-    } else if( $count <=50 ) {
-        $tipograu = "Moderado";
-    }else{
-        $tipograu = "Alto";
-    }
-
-    $user -> setGrauVicio($tipograu);
-    $boolean = $daouser->selectUserVerfica($user->getEmail());
-    if($boolean == "true"){
+    // Verificação de email já existente
+    if ($daouser->selectUserVerfica($user->getEmail())) {
         echo "
-    <script type=\"text/javascript\">
-        alert('Email já existente, por favor digite outro!');
-        window.location.href = '<?=HOME?>Cadastro';  // Coloque a URL para onde deseja redirecionar
-    </script>
-    ";
-    }else if($boolean == "false"){
-        $daouser -> insertUser($user);
-        header("Location: ".HOME."home/Perfil");    
+        <script type=\"text/javascript\">
+            alert('Email já existente, por favor digite outro!');
+            window.location.href = '<?=HOME?>Cadastro';  
+        </script>
+        ";
+    } else {
+        // Questionário para calcular grau de vício
+        $count = $_POST['celular'] + $_POST['tv'] + $_POST['pc'] + $_POST['game'];
+
+        $tipograu = $count <= 20 ? "Baixo" : ($count <= 50 ? "Moderado" : "Alto");
+        $user->setGrauVicio($tipograu);
+
+        // Inserção do novo usuário
+        $daouser->insertUser($user);
+        header("Location: " . HOME . "home/Perfil");
     }
-    
-
-
-
 }
-
-
 ?>
+
 
 
 <!DOCTYPE html>
