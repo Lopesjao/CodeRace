@@ -100,13 +100,28 @@ body {
 
     <div class="container">
         <div class="main-content">
-        <img src="src/View/img/logo.png" alt="Logo" width="85% " height="80%" class="d-inline-block align-text-top">
-        <div id="msg">
-    <p class="quote">Citação do dia</p>
-    <p class="quote">A persistência é o caminho do êxito.</p>
-    <p class="quote-author">Charles Chaplin</p>
-</div>
-           
+            <div class="container" style="width: 70%;">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="src/View/img/logo.png" class="d-block w-100" alt="Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="main-content"> <h1>Ajudamos você a se <span class="corverde">desconectar</span> para (re)<span class="corverde">Conectar</span> com o mais importante... sua <span class="corazul">vida</span></h1> <p>Nós entendemos a importância do equilíbrio entre o uso da tecnologia e a vida pessoal. O OnLife foi criado para auxiliar pessoas a diminuírem seu tempo de tela, promovendo uma conexão mais saudável com o mundo ao seu redor. Estamos aqui para ajudar você a reconquistar momentos significativos fora das telas digitais.</p> </div>
+
+            <br>
+
+            <div id="msg">
+                <p class="quote">Citação do dia</p>
+                <p class="quote">A persistência é o caminho do êxito.</p>
+                <p class="quote-author">Charles Chaplin</p>
+            </div>
+
         </div>
     </div>
 
