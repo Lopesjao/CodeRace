@@ -76,10 +76,10 @@
         </header>
     </section>
 
-    <div class="container text-center my-5">
+    <div class="container text-center my-50">
         <h2>Atividade Selecionada</h2>
-        <div class="row mt-5">
-        <div class="col-md-4">
+        <div class="row mt-5 justify-content-center">
+        <div class="col-md-4 mx-auto">
                 <h4>Sessão de Alongamento</h4>
                 <img src="src/View/img/along.jpg" alt="Imagem da Atividade 3" class="img-fluid mb-2" style="width: 100%; height: auto; background-color: #0044cc; color: white; line-height: 150px;">
                 <p>Reserve alguns minutos para se alongar e liberar a tensão acumulada. O alongamento melhora a flexibilidade, alivia dores musculares e aumenta a circulação sanguínea, proporcionando uma sensação de bem-estar.</p>

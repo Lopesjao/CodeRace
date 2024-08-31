@@ -78,8 +78,8 @@
 
     <div class="container text-center my-5">
         <h2>Atividade Selecionada</h2>
-        <div class="row mt-5">
-            <div class="col-md-4">
+        <div class="row mt-5 justify-content-center">
+        <div class="col-md-4 mx-auto">
                 <h4>Leitura de um Capítulo de Livro</h4>
                 <img src="src/View/img/livro.jpg" alt="Imagem da Atividade 2" class="img-fluid mb-2" style="width: 100%; height: auto;">
                 <p>Escolha um livro que você está interessado e se permita mergulhar em uma nova história ou aprender algo novo. Dedique 30 minutos do seu dia para ler um capítulo e desfrute do prazer da leitura.</p>
