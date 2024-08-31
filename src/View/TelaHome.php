@@ -12,50 +12,65 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>OnLife - Desconecte para Conectar</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
 
-        .main-content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
 
-        .main-content h1 {
-            font-size: 28px;
-            margin: 0;
-            padding: 0 10px;
-            color: #000000;
-        }
+body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+    }
 
-        .main-content h1 .corazul {
-            color: #00b0f0;
-        }
+    .main-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-        .main-content h1 .corverde {
-            color: #7fd32d;
-        }
+    .main-content h1 {
+        font-size: 28px;
+        margin: 0;
+        padding: 0 10px;
+        color: #000000;
+    }
 
-        footer {
-            display: center;
-            justify-content: space-between;
-            width: 100%;
-            padding: 20px;
-            font-size: 14px;
-        }
+    .main-content h1 .corazul {
+        color: #00b0f0;
+    }
 
-        a {
-            text-decoration: none;
-            color: #000000;
-        }
+    .main-content h1 .corverde {
+        color: #7fd32d;
+    }
+
+    .quote {
+        font-size: 20px;
+        font-style: italic;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .quote-author {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    footer {
+        display: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
     </style>
 </head>
 <body>
@@ -85,8 +100,13 @@
 
     <div class="container">
         <div class="main-content">
-            <h1>Ajudamos você a se <span class="corazul">desconectar</span> para (re)<span class="corazul">Conectar</span> com o mais importante... sua <span class="corverde">vida</span></h1>
-            <p>Nós entendemos a importância do equilíbrio entre o uso da tecnologia e a vida pessoal. O OnLife foi criado para auxiliar pessoas a diminuírem seu tempo de tela, promovendo uma conexão mais saudável com o mundo ao seu redor. Estamos aqui para ajudar você a reconquistar momentos significativos fora das telas digitais.</p>
+        <img src="src/View/img/logo.png" alt="Logo" width="85% " height="80%" class="d-inline-block align-text-top">
+        <div id="msg">
+    <p class="quote">Citação do dia</p>
+    <p class="quote">A persistência é o caminho do êxito.</p>
+    <p class="quote-author">Charles Chaplin</p>
+</div>
+           
         </div>
     </div>
 
