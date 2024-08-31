@@ -21,8 +21,9 @@
             margin: 0;
             text-align: center;
         }
+        
         footer {
-            display: flex;
+            display: center;
             justify-content: space-between;
             width: 100%;
             padding: 20px;
@@ -35,9 +36,9 @@
         <header class="header-inicio">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="<?=HOME?>Home">
-                        <img src="src/View/img/logo.png" alt="Logo" width="100%" height="70" class="d-inline-block align-text-top">
-                    </a>
+                <a class="navbar-brand" href="<?=HOME?>Home">
+                    <img src="src/View/img/logo.png" alt="Logo" width="100% " height="70" class="d-inline-block align-text-top">
+                </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -55,42 +56,68 @@
     </section>
 
     <div class="container">
-        <br>
+
+    <br>
+
         <div class="container" style="width: 60%;">
             <form align="center" action="<?=HOME?>Questionario" method="post">
                 <h2>CADASTRO</h2>
                 <br>
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" class="form-control" required>
+                <label for="nome"> Nome </label>
+                <input 
+                    type="text" 
+                    name="nome" 
+                    id="nome" 
+                    class="form-control">
 
                 <br>
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" class="form-control" required>
+                <label for="email"> Email </label>
+                <input 
+                    type="text" 
+                    name="email" 
+                    id="email" 
+                    class="form-control">
 
                 <br>
 
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" class="form-control" required>
-
+                <label for="senha"> Senha </label>
+                <input 
+                    type="password" 
+                    id="senha" 
+                    name="senha" 
+                    class="form-control">
+                                                
                 <br>
 
-                <label for="dataNasc">Data de Nascimento</label>
-                <input type="date" id="dataNasc" name="dataNasc" class="form-control" required>
-
+                <label for="dataNasc"> Data de Nascimento </label>
+                <input 
+                    type="date" 
+                    id="dataNasc" 
+                    name="dataNasc" 
+                    class="form-control">
+                                                
                 <br>
 
-                <label><a href="<?=HOME?>Login">Já possui cadastro?</a></label>
+                <label> <a href="<?=HOME?>Login"> Já possui cadastro? </a> </label> 
                 <br><br>
-                <button type="submit" name="cadastrar" class="btn btn-primary">Cadastrar</button>
+                <button 
+                    type="submit" 
+                    name="cadastrar" 
+                    class="btn btn-primary"
+                    >Cadastrar</button>
             </form>
         </div>
+
     </div>
     
     <footer>
         <span>Copyright 2024</span>
     </footer>
+    
 
     <script src="<?=HOME?>src/View/JavaScript/JavaScriptComandos.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 </body>
 </html>
