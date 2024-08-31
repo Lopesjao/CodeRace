@@ -1,3 +1,16 @@
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    include_once __DIR__ .'/../Model/user.php';
+    
+    $user = new $user();
+
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,35 +27,35 @@
 <div class="container">
     <div class="form-container">
             <h2>Cadastro sei la</h2>
-            <form action="Controle/userexists.php" method="post">
+            <form action="#" method="post">
 
                 <label >Quantas horas por dia você passa em frente de um dispositivo movel:</label><br>
-                <input type="radio" name="celular" value="1" required>Não Uso<br/>
-                <input type="radio" name="celular" value="2" required>Menos de 2 horas<br/>
-                <input type="radio" name="celular" value="3" required>2-4 horas<br/>
-                <input type="radio" name="celular" value="4" required>4-6 horas<br/>
-                <input type="radio" name="celular" value="5" required>Mais de 6 horas<<br/>
+                <input type="radio" name="celular" value="0" required>Não Uso<br/>
+                <input type="radio" name="celular" value="5" required>Menos de 2 horas<br/>
+                <input type="radio" name="celular" value="10" required>2-4 horas<br/>
+                <input type="radio" name="celular" value="15" required>4-6 horas<br/>
+                <input type="radio" name="celular" value="20" required>Mais de 6 horas<br/>
 
                 <label >Quantas horas por dia você passa em frente de uma Televisão:</label><br>
-                <input type="radio" name="tv" value="1" required>Não Uso<br/>
-                <input type="radio" name="tv" value="2" required>Menos de 2 horas<br/>
-                <input type="radio" name="tv" value="3" required>2-4 horas<br/>
-                <input type="radio" name="tv" value="4" required>4-6 horas<br/>
-                <input type="radio" name="tv" value="5" required>Mais de 6 horas<<br/>
+                <input type="radio" name="tv" value="0" required>Não Uso<br/>
+                <input type="radio" name="tv" value="5" required>Menos de 2 horas<br/>
+                <input type="radio" name="tv" value="10" required>2-4 horas<br/>
+                <input type="radio" name="tv" value="15" required>4-6 horas<br/>
+                <input type="radio" name="tv" value="20" required>Mais de 6 horas<br/>
 
                 <label >Quantas horas por dia você passa em frente de um Computador:</label><br>
-                <input type="radio" name="pc" value="1" required>Não Uso<br/>
-                <input type="radio" name="pc" value="2" required>Menos de 2 horas<br/>
-                <input type="radio" name="pc" value="3" required>2-4 horas<br/>
-                <input type="radio" name="pc" value="4" required>4-6 horas<br/>
-                <input type="radio" name="pc" value="5" required>Mais de 6 horas<<br/>
+                <input type="radio" name="pc" value="0" required>Não Uso<br/>
+                <input type="radio" name="pc" value="5" required>Menos de 2 horas<br/>
+                <input type="radio" name="pc" value="10" required>2-4 horas<br/>
+                <input type="radio" name="pc" value="15" required>4-6 horas<br/>
+                <input type="radio" name="pc" value="20" required>Mais de 6 horas<br/>
 
                 <label >Quantas horas por dia você passa em frente de um Video Game:</label><br>
-                <input type="radio" name="game" value="1" required>Não Uso<br/>
-                <input type="radio" name="game" value="2" required>Menos de 2 horas<br/>
-                <input type="radio" name="game" value="3" required>2-4 horas<br/>
-                <input type="radio" name="game" value="4" required>4-6 horas<br/>
-                <input type="radio" name="game" value="5" required>Mais de 6 horas<<br/>
+                <input type="radio" name="game" value="0" required>Não Uso<br/>
+                <input type="radio" name="game" value="5" required>Menos de 2 horas<br/>
+                <input type="radio" name="game" value="10" required>2-4 horas<br/>
+                <input type="radio" name="game" value="15" required>4-6 horas<br/>
+                <input type="radio" name="game" value="20" required>Mais de 6 horas<br/>
 
                 <input href="./index.php" type="submit" value="Cadastrar">
             </form>
