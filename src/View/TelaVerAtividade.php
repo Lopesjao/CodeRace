@@ -59,16 +59,19 @@
                 <h4>Corrida ao Ar Livre</h4>
                 <img src="src/View/img/corrida.jpg" alt="Imagem da Atividade 1" class="img-fluid mb-2" style="width: 100%; height: auto; background-color: #0044cc; color: white; line-height: 150px;">
                 <p>Coloque seus fones de ouvido, escolha sua playlist favorita e vá para uma corrida ao ar livre. Além de melhorar sua saúde física, a corrida ajuda a reduzir o estresse e proporciona uma sensação de liberdade.</p>
+                <a href="<?=HOME?>Corrida" class="btn btn-primary">Começar Atividade</a>
             </div>
             <div class="col-md-4">
                 <h4>Leitura de um Capítulo de Livro</h4>
                 <img src="src/View/img/livro.jpg" alt="Imagem da Atividade 2" class="img-fluid mb-2" style="width: 100%; height: auto; background-color: #0044cc; color: white; line-height: 150px;">
                 <p>Escolha um livro que você está interessado e se permita mergulhar em uma nova história ou aprender algo novo. Dedique 30 minutos do seu dia para ler um capítulo e desfrute do prazer da leitura.</p>
+                <a href="<?=HOME?>Livro" class="btn btn-primary">Começar Atividade</a>
             </div>
             <div class="col-md-4">
                 <h4>Sessão de Alongamento</h4>
                 <img src="src/View/img/along.jpg" alt="Imagem da Atividade 3" class="img-fluid mb-2" style="width: 100%; height: auto; background-color: #0044cc; color: white; line-height: 150px;">
                 <p>Reserve alguns minutos para se alongar e liberar a tensão acumulada. O alongamento melhora a flexibilidade, alivia dores musculares e aumenta a circulação sanguínea, proporcionando uma sensação de bem-estar.</p>
+                <a href="<?=HOME?>Along" class="btn btn-primary">Começar Atividade</a>
             </div>
         </div>
     </div>

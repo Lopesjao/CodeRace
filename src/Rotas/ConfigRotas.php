@@ -7,6 +7,9 @@
     Rotas::add('/Contato', 'View/TelaContato.php');
     Rotas::add('/Atividade', 'View/TelaAtividade.php');
     Rotas::add('/VerAtividade', 'View/TelaVerAtividade.php');
+    Rotas::add('/Corrida', 'View/TelaCorrida.php');
+    Rotas::add('/Along', 'View/TelaAlong.php');
+    Rotas::add('/Livro', 'View/TelaLivro.php');
 
     
     Rotas::add('/Cadastro', '/CodeRace/src/View/TelaCadastro.php');
