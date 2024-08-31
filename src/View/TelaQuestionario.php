@@ -1,7 +1,10 @@
 <?php
 
 include_once __DIR__ . '/../Rotas/Constantes.php';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    include_once __DIR__ . '/../Conexao/Conexao.php';
     include_once __DIR__ .'/../Model/user.php';
     include_once __DIR__ .'/../Controller/DAOUser.php';
     $user = new User();
@@ -11,6 +14,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user ->setEmail($_POST['email']);
     $user ->setSenha($_POST['senha']);
     $user ->setDataNasc($_POST['dataNasc']);
+
+    $count;
+    $count + $_POST['celular'];
+    $count + $_POST['tv'];
+    $count + $_POST['pc'];
+    $count + $_POST['game'];
+
+    $tipograu;
+
+    if($count <= 20 ){
+        $tipograu = "Baixo";
+    } else if( $count <=50 ) {
+        $tipograu = "Moderado";
+    }else{
+        $tipograu = "Alto";
+    }
+
+    $user -> setGrauVicio($tipograu);
+    
+    $conexao = new Conexao();
+        $conexao = $conexao->conexao();
+        $stmt = $conexao->prepare('SELECT * FROM usuario WHERE email = "'.$email.'"');
+        $stmt->execute();
+		$count = $stmt->rowCount();
+
 
 
 }

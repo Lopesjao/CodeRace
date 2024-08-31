@@ -17,7 +17,7 @@
     <div class="container">
     <div class="form-container">
             <h2>Cadastro</h2>
-            <form action="TelaQuestionario.php" method="post">
+            <form action="<?=HOME?>Questionario" method="post">
                 <label >Nome:</label><br>
                 <input type="text" id="nome" name="nome" required><br>
                 <label >Email:</label><br>
@@ -25,7 +25,7 @@
                 <label >Senha:</label><br>
                 <input type="password" id="senha" name="senha" required><br>
                 <label >Data Nascimento:</label><br>
-                <input type="date" id="dataNasc" name="cidade"><br>
+                <input type="date" id="dataNasc" name="dataNasc"><br>
                 <input href="TelaQuestionario.php" type="submit" value="Cadastrar"> <!-- Arrumar A rota  -->
             </form>
         </div>
