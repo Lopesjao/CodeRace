@@ -19,6 +19,16 @@ class DAOUser{
         $pstmt->execute();
         return $pstmt;
     }
+    public function selectUserVerfica($email){
+        $pstmt = $this->conexao->prepare("SELECT * FROM atividade WHERE email = ?");
+        $pstmt->bindValue(1, $email);
+        $pstmt->execute();
+        if ($pstmt->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
 

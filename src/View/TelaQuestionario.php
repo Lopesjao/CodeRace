@@ -32,12 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $user -> setGrauVicio($tipograu);
+    $boolean = $daouser->selectUserVerfica($user->getEmail());
+    if($boolean == "true"){
+
+    }else if($boolean == "false"){
+        
+    }
     
-    $conexao = new Conexao();
-        $conexao = $conexao->conexao();
-        $stmt = $conexao->prepare('SELECT * FROM usuario WHERE email = "'.$email.'"');
-        $stmt->execute();
-		$count = $stmt->rowCount();
 
 
 
