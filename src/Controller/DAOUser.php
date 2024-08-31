@@ -7,7 +7,7 @@ class DAOUser{
         public function __construct(){
             $this->conexao = Conexao::getConexao();
         }
-    public function insertAnotacao(User $user){
+    public function insertUser(User $user){
         $pstmt = $this->conexao->prepare("INSERT INTO user 
         (nome, dataNasc, senha, email, grauVicio) VALUES 
         (?,?,?,?,?)");

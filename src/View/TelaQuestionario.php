@@ -34,9 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user -> setGrauVicio($tipograu);
     $boolean = $daouser->selectUserVerfica($user->getEmail());
     if($boolean == "true"){
-
+        echo "
+				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL='>
+				<script type=\"text/javascript\">
+					alert(\"Email já existente, por favor digite outro!\");
+				</script>
+				";
     }else if($boolean == "false"){
-        
+        $daouser -> insertUser($user);
     }
     
 
