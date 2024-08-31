@@ -30,7 +30,25 @@ class DAOUser{
         }
     }
 
+    public function selectAllUser(){
+        $pstmt = $this->conexao->prepare("SELECT * FROM user");
+        $pstmt->execute();
+        $lista = $pstmt->fetchAll(PDO::FETCH_CLASS, User::class);
+        return $lista;
+    }
+
+    public function deleteUser(){
+        $idUser = $_POST['idUser'];
+        $pstmt = $this->conexao->prepare("DELETE FROM user WHERE idUser = ?");
+        $pstmt->bindValue(1, $idUser);
+        unset($_SESSION["login"]);
+        unset($_SESSION["senha"]);
+        echo json_encode($pstmt->execute());
+    }  
+
+    
 }
+
 
 
 
