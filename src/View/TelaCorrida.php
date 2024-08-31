@@ -78,8 +78,8 @@
 
     <div class="container text-center my-5">
         <h2>Atividade Selecionada</h2>
-        <div class="row mt-5">
-        <div class="col-md-4">
+        <div class="row mt-5 justify-content-center">
+        <div class="col-md-4 mx-auto">
                 <h4>Corrida ao Ar Livre</h4>
                 <img src="src/View/img/corrida.jpg" alt="Imagem da Atividade 1" class="img-fluid mb-2" style="width: 100%; height: auto; background-color: #0044cc; color: white; line-height: 150px;">
                 <p>Coloque seus fones de ouvido, escolha sua playlist favorita e vá para uma corrida ao ar livre. Além de melhorar sua saúde física, a corrida ajuda a reduzir o estresse e proporciona uma sensação de liberdade.</p>
