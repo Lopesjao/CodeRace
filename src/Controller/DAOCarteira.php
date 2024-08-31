@@ -6,12 +6,12 @@
         public function __construct(){
             $this->conexao = Conexao::getConexao();
         }
-        public function insertCarteira(Carteira $Carteira){
+        public function insertCarteira($fk,$moeda){
             $pstmt = $this->conexao->prepare("INSERT INTO carteira 
             (fkUser, moedaRecebida, moedaAtual) VALUES (?, ?, ?)");
-            $pstmt->bindValue(1, $Carteira->getFkUser());
-            $pstmt->bindValue(2, $Carteira->getMoedaRecebida());
-            $pstmt->bindValue(3, $Carteira->getmoedaAtual());
+            $pstmt->bindValue(1, $fk);
+            $pstmt->bindValue(2, $moeda);
+            $pstmt->bindValue(3, $moeda);
             $pstmt->execute();
             return $pstmt;
         }

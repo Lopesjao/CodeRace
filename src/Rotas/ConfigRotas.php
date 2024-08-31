@@ -10,6 +10,7 @@
     Rotas::add('/Corrida', 'View/TelaCorrida.php');
     Rotas::add('/Along', 'View/TelaAlong.php');
     Rotas::add('/Livro', 'View/TelaLivro.php');
+    Rotas::add('/TesteAtividade', 'View/TesteAtividade.php');
 
     
     Rotas::add('/Cadastro', '/CodeRace/src/View/TelaCadastro.php');

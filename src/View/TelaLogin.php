@@ -9,6 +9,7 @@
     if (isset($_POST['entrar'])) {
         $daouser1 = new DAOUser();
         $loginStatus = $daouser1->selectUserVerficaLogin($_POST['email'], $_POST['senha']);
+        $_SESSION["email"] = $_POST['email'];
     
         if ($loginStatus === true) {
             // Login bem-sucedido

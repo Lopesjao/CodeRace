@@ -85,7 +85,12 @@
                 <p>Reserve alguns minutos para se alongar e liberar a tensão acumulada. O alongamento melhora a flexibilidade, alivia dores musculares e aumenta a circulação sanguínea, proporcionando uma sensação de bem-estar.</p>
                 <div class="timer" id="timer">00:00:00</div>
                 <button id="startPauseBtn" class="btn btn-success">Iniciar Atividade</button>
-                <button id="finalizeBtn" class="btn btn-danger" disabled>Finalizar Atividade</button>
+                <button type="submit" id="finalizeBtn" name="finalAlong" class="btn btn-danger" disabled>Finalizar Atividade</button>
+               
+                <form method="POST" action="<?=HOME?>TesteAtividade">
+                    <button type="submit" id="enviar" name="enviar" class="btn btn-danger">Enviar</button>
+                </form>
+                
                 <div id="message" class="message" style="display:none;">Atividade finalizada com sucesso!</div>
             </div>
         </div>

@@ -24,6 +24,8 @@ class DAOUser{
         $pstmt->bindValue(1, $email);
         $pstmt->execute();
         if ($pstmt->rowCount() > 0) {
+            $user = $pstmt->fetch(PDO::FETCH_ASSOC);
+            $_SESSION["idUser"] = $user['idUser'];
             return true;
         } else {
             return false;
@@ -42,6 +44,7 @@ class DAOUser{
             
             // Use password_verify para comparar a senha
             if ($senha == $user['senha']) {
+                $_SESSION["idUser"] = $user['idUser'];
                 return true; // Login bem-sucedido
             } else {
                 return "senha_incorreta"; // Senha incorreta
