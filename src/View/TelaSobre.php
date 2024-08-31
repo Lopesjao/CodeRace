@@ -49,7 +49,7 @@
                             <li class="nav-item"><a class="nav-link active" href="<?=HOME?>Sobre">Sobre nós</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?=HOME?>Contato">Contato</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?=HOME?>Login">Logar</a></li>
-                            <li class="nav-item"><a class="nav-link" href="<?=HOME?>Contato">Cadastrar</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?=HOME?>Cadastro">Cadastrar</a></li>
                         </ul>
                     </div>
                 </div>
