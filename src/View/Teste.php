@@ -44,15 +44,26 @@
         } else {
             $tipograu = "Alto";
         }
-echo "<h1>ola";
+        echo "<h1>ola";
         $user->setGrauVicio($tipograu);
         $boolean = $daouser->selectUserVerfica($user->getEmail());
 
         if ($boolean) {
-            echo "<script>alert('Email já existente, por favor digite outro!'); window.location.href = '<?=HOME?>Cadastro';</script>";
+            echo "<script>alert('Email já existente, por favor digite outro!'); window.location.href = '/CodeRace/Cadastro';</script>";
         } else {
             $daouser->insertUser($user);
-            header("Location: " . HOME . "Perfil");
+            header("Location: " . HOME . "VerAtividade");
         }
     }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script src="<?=HOME?>src/View/JavaScript/JavaScriptComandos.js"></script>
+</body>
+</html>
