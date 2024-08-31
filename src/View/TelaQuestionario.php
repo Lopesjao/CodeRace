@@ -3,6 +3,13 @@
 include_once __DIR__ . '/../Rotas/Constantes.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    $_SESSION["login"] = $_POST['nome'];
+    $_SESSION["login"] = $_POST['email'];
+    $_SESSION["login"] = $_POST['senha'];
+    $_SESSION["login"] = $_POST['dataNasc'];
 
     $teste=0;
 
