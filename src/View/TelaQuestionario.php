@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ";
     }else if($boolean == "false"){
         $daouser -> insertUser($user);
+        header("Location: ".HOME."home/Perfil");    
     }
     
 
