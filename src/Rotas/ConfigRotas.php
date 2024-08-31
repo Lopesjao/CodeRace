@@ -5,6 +5,9 @@
     Rotas::add('/Home', 'View/TelaHome.php');
     Rotas::add('/Sobre', 'View/TelaSobre.php');
     Rotas::add('/Contato', 'View/TelaContato.php');
+    Rotas::add('/Atividade', 'View/TelaAtividade.php');
+    Rotas::add('/VerAtividade', 'View/TelaVerAtividade.php');
+
 
 
     Rotas::add('/Login', 'View/TelaLogin.php');
