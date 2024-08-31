@@ -134,7 +134,7 @@ body {
             <br>
             <div class="container">
             <div class="main-content"> 
-                <h1>Ajudamos você a se <span class="corverde">desconectar</span> para (re)<span class="corverde">Conectar</span> com o mais importante... sua <span class="corazul">vida</span></h1> <p>Nós entendemos a importância do equilíbrio entre o uso da tecnologia e a vida pessoal. O OnLife foi criado para auxiliar pessoas a diminuírem seu tempo de tela, promovendo uma conexão mais saudável com o mundo ao seu redor. Estamos aqui para ajudar você a reconquistar momentos significativos fora das telas digitais.</p> </div>
+                <h1>Ajudamos você a se <span class="corazul">desconectar</span> para (re)<span class="corazul">Conectar</span> com o mais importante... sua <span class="corverde">vida</span></h1> <p>Nós entendemos a importância do equilíbrio entre o uso da tecnologia e a vida pessoal. A OnLife foi criada para auxiliar pessoas a diminuírem seu tempo de tela, promovendo uma conexão mais saudável com o mundo ao seu redor. Estamos aqui para ajudar você a reconquistar momentos significativos fora das telas digitais.</p> </div>
 
                 <br>
 
