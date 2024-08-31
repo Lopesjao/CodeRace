@@ -62,7 +62,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="display-4">Sobre Nós</h1>
-                <p class="lead mt-4">A OnLife é uma plataforma inovadora criada com o objetivo de promover o equilíbrio entre a vida digital e o mundo real. Compreendemos a importância de desconectar das telas para se reconectar com o que realmente importa: a sua vida e os seus relacionamentos. Nossa missão é auxiliar as pessoas a reduzirem o tempo excessivo de uso de dispositivos digitais, incentivando práticas mais saudáveis e conscientes.</p>
+                <p class="lead mt-4">A OnLife é uma plataforma criada com o objetivo de promover o equilíbrio entre a vida digital e o mundo real. Compreendemos a importância de desconectar das telas para se reconectar com o que realmente importa: a sua vida e os seus relacionamentos. Nossa missão é auxiliar as pessoas a reduzirem o tempo excessivo de uso de dispositivos digitais, incentivando práticas mais saudáveis e conscientes.</p>
             </div>
         </div>
         

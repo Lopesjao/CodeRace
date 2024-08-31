@@ -1,39 +1,10 @@
 <?php
     include_once __DIR__ . '/../Rotas/Constantes.php';
-    include_once __DIR__ . "../Controller/ConUser.php";
-    include_once __DIR__ . "../Model/User.php";
-    if(isset($_POST['email']) && isset($_POST['senha'])){
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
-
-        $ConUser = new ConUser();
-        $linha = $ConUser->selectLoginUser1($_POST['email']);
-
-        if($linha == null){
-            echo "
-            <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=TelaLogin.php'>
-            <script type=\"text/javascript\">
-                alert(\"Desculpe, essa conta não existe.\");
-            </script>
-            ";
-        }else{
-            if($linha != null){
-                $user = new User($linha[0]);
-                if(($user->getEmail() == $_POST['email']) && ($user->getSenha() == $_POST['senha'])){
-                    $_SESSION["USER_LOGIN"] = $_POST['email'];
-                    header("Location: TelaMenu.php");
-                    exit;
-                }else{
-                    echo "
-                    <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=TelaLogin.php'>
-                    <script type=\"text/javascript\">
-                        alert(\"Erro!\");
-                    </script>
-                    ";
-                }
-            }
-        }  
+    include_once __DIR__ . "/../Controller/DAOUser.php";
+    include_once __DIR__ . "/../Model/User.php";
+    
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
     }
 
 ?>
@@ -96,7 +67,7 @@
         <br>
 
         <div class="container" style="width: 60%;">
-            <form align="center" method="POST" action="TelaLogin.php">
+            <form align="center" method="POST" action="<?=HOME?>Login">
                 <h2>LOGIN</h2>
                 <br>
                 <label for="email"> Email </label>
