@@ -27,6 +27,13 @@
             $pstmt->execute();
             return $pstmt;
         }  
+        public function selectFK($fkuser){
+            $pstmt = $this->conexao->prepare("SELECT * FROM carteira WHERE fkUser = ?");
+            $pstmt->bindValue(1, $fkuser);
+            $pstmt->execute();
+            $lista = $pstmt->fetchAll(PDO::FETCH_CLASS, Carteira::class);
+            return $lista;
+        }  
         public function updateCarteira(Carteira $Carteira){
             $pstmt = $this->conexao->prepare("UPDATE carteira SET moedaRecebida = ?, moedaAtual = ?
             WHERE idCarteira = ?");
