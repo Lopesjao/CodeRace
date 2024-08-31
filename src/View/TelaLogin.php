@@ -88,7 +88,7 @@
                                                 
                 <br>
 
-                <label> <a href="TelaCadastro.php"> Não possui cadastro? </a> </label> 
+                <label> <a href="<?=HOME?>Cadastro"> Não possui cadastro? </a> </label> 
                 <br><br>
                 <button 
                     type="submit" 
