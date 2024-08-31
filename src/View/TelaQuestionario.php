@@ -63,7 +63,7 @@
     <div class="container">
             <form align="center" action="<?=HOME?>teste" method="post">
                 
-                <h2>Cadastro sei la</h2>
+                <h2>Perfil do Usuario</h2>
                 <br>
                 <label> Quantas horas por dia você passa em frente de um dispositivo movel </label>
                 <br>
