@@ -12,7 +12,20 @@
 </head>
 <body>
     <div class="container">
-
+    <div class="form-container">
+            <h2>Cadastro</h2>
+            <form action="Controle/userexists.php" method="post">
+                <label >Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br>
+                <label >Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label >Senha:</label><br>
+                <input type="password" id="senha" name="senha" required><br>
+                <label >Data Nascimento:</label><br>
+                <input type="text" id="dataNasc" name="cidade"><br>
+                <input href="./index.php" type="submit" value="Cadastrar">
+            </form>
+        </div>
 
     </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
