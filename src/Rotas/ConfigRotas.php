@@ -3,14 +3,17 @@
 
     Rotas::add('/', 'View/Teste.php');
     Rotas::add('/Home', 'View/Home.php');
+
+    Rotas::add('/Login', 'View/TelaLogin.php');
+    Rotas::add('/Cadastro', 'View/TelaCadastro.php');
+    Rotas::add('/Sair', 'View/TelaSair.php');
+
+    Rotas::add('/Perfil', 'View/TelaPerfil.php');
+
     Rotas::add('/Graficos', 'View/Graficos.php');
     Rotas::add('/GerarPDF', 'View/Gera_PDF.php');
     Rotas::add('/Resposta', 'View/Gerar_pdf.php');
-    Rotas::add('/Login', 'View/Login.php');
-    Rotas::add('/Perfil', 'View/Perfil.php');
-    Rotas::add('/Sair', 'View/Sair.php');
     Rotas::add('/teste', 'View/teste.php');
-    Rotas::add('/Cadastro', 'View/Cadastro.php');
     Rotas::add('/Anotacao_Historico', 'View/AnotacaoHist.php');
     Rotas::addGetInt('/Anotacao', 'View/Anotacao.php', 'IdDado');
     Rotas::addGet('/controller', 'Controller/FunctionController.php', 'function');
