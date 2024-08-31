@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
 
-body {
+        body {
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -21,15 +21,6 @@ body {
             height: 100vh;
             margin: 0;
             text-align: center;
-        }
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            color: #00b0f0;
-        }
-
-        .logo span {
-            color: #7fd32d;
         }
         
         footer {
@@ -47,9 +38,9 @@ body {
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
 				    
-                    <a class="navbar-brand" href="<?=HOME?>Home">
-                        <div class="logo">On<span>Life</span></div>
-                    </a>
+                <a class="navbar-brand" href="<?=HOME?>Home">
+                    <img src="src/View/img/logo.png" alt="Logo" width="100% " height="70" class="d-inline-block align-text-top">
+                </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
