@@ -35,11 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $boolean = $daouser->selectUserVerfica($user->getEmail());
     if($boolean == "true"){
         echo "
-				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL='>
-				<script type=\"text/javascript\">
-					alert(\"Email já existente, por favor digite outro!\");
-				</script>
-				";
+    <script type=\"text/javascript\">
+        alert('Email já existente, por favor digite outro!');
+        window.location.href = '<?=HOME?>Cadastro';  // Coloque a URL para onde deseja redirecionar
+    </script>
+    ";
     }else if($boolean == "false"){
         $daouser -> insertUser($user);
     }
