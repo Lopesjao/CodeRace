@@ -1,77 +1,22 @@
 <?php
+    include_once __DIR__ . '/../Rotas/Constantes.php';
+    include_once __DIR__ . '/../Conexao/Conexao.php';
 
-include_once __DIR__ . '/../Rotas/Constantes.php';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }
-    $_SESSION["login"] = $_POST['nome'];
-    $_SESSION["login"] = $_POST['email'];
-    $_SESSION["login"] = $_POST['senha'];
-    $_SESSION["login"] = $_POST['dataNasc'];
 
-    $teste=0;
-
-    if($teste = 0){
-
-    include_once __DIR__ . '/../Conexao/Conexao.php';
-    include_once __DIR__ .'/../Model/user.php';
-    include_once __DIR__ .'/../Controller/DAOUser.php';
-    $user = new User();
-    $daouser = new DAOUser();
-
-    $user ->setNome($_POST['nome']);
-    $user ->setEmail($_POST['email']);
-    $user ->setSenha($_POST['senha']);
-    $user ->setDataNasc($_POST['dataNasc']);
-    $teste = 1;
-
+    if (isset($_POST['cadastrar'])) {
+        $_SESSION["nome"] = $_POST['nome'];
+        $_SESSION["email"] = $_POST['email'];
+        $_SESSION["senha"] = $_POST['senha'];
+        $_SESSION["dataNasc"] = $_POST['dataNasc'];
     }
 
-
-    if (isset($_POST['Cadastrar'])){
-
-   
-    $count;
-    $count + $_POST['celular'];
-    $count + $_POST['tv'];
-    $count + $_POST['pc'];
-    $count + $_POST['game'];
-
-    $tipograu;
-
-    if($count <= 20 ){
-        $tipograu = "Baixo";
-    } else if( $count <=50 ) {
-        $tipograu = "Moderado";
-    }else{
-        $tipograu = "Alto";
-    }
-
-    $user -> setGrauVicio($tipograu);
-    $daouser -> insertUser($user);
-    $boolean = $daouser->selectUserVerfica($user->getEmail());
-    if($boolean == "true"){
-        echo "
-    <script type=\"text/javascript\">
-        alert('Email já existente, por favor digite outro!');
-        window.location.href = '<?=HOME?>Cadastro';  // Coloque a URL para onde deseja redirecionar
-    </script>
-    ";
-    }else {
-        if($boolean == "false"){
-            $daouser -> insertUser($user);
-            header("Location: ".HOME."home/Perfil");    
-        }
-    }
-}
-
-
-
-}
-
-
+    echo $_SESSION["nome"];
+    echo $_SESSION["senha"];
+    echo $_SESSION["email"];
+    echo $_SESSION["dataNasc"];
 ?>
 
 
@@ -91,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="container">
     <div class="form-container">
             <h2>Cadastro sei la</h2>
-            <form action="#" method="post">
+            <form action="<?=HOME?>teste" method="post">
 
                 <label >Quantas horas por dia você passa em frente de um dispositivo movel:</label><br>
                 <input type="radio" name="celular" value="0" required>Não Uso<br/>
@@ -121,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="radio" name="game" value="15" required>4-6 horas<br/>
                 <input type="radio" name="game" value="20" required>Mais de 6 horas<br/>
 
-                <input href="./index.php" type="submit" value="Cadastrar">
+                <input type="submit" name="Cadastrar22" value="Cadastrar22">
             </form>
         </div>
 

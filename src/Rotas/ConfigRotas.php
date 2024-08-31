@@ -20,7 +20,7 @@
     Rotas::add('/Graficos', 'View/Graficos.php');
     Rotas::add('/GerarPDF', 'View/Gera_PDF.php');
     Rotas::add('/Resposta', 'View/Gerar_pdf.php');
-    Rotas::add('/teste', 'View/teste.php');
+    Rotas::add('/teste', 'View/Teste.php');
     Rotas::add('/Anotacao_Historico', 'View/AnotacaoHist.php');
     Rotas::addGetInt('/Anotacao', 'View/Anotacao.php', 'IdDado');
     Rotas::addGet('/controller', 'Controller/FunctionController.php', 'function');
