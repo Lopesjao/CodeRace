@@ -1,5 +1,39 @@
 <?php
-    
+    include_once "../Controller/ConUser.php";
+    include_once "../Model/User.php";
+    if(isset($_POST['email']) && isset($_POST['senha'])){
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $ConUser = new ConUser();
+        $linha = $ConUser->selectLoginUser1($_POST['email']);
+
+        if($linha == null){
+            echo "
+            <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=TelaLogin.php'>
+            <script type=\"text/javascript\">
+                alert(\"Desculpe, essa conta não existe.\");
+            </script>
+            ";
+        }else{
+            if($linha != null){
+                $user = new User($linha[0]);
+                if(($user->getEmail() == $_POST['email']) && ($user->getSenha() == $_POST['senha'])){
+                    $_SESSION["USER_LOGIN"] = $_POST['email'];
+                    header("Location: TelaMenu.php");
+                    exit;
+                }else{
+                    echo "
+                    <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=TelaLogin.php'>
+                    <script type=\"text/javascript\">
+                        alert(\"Erro!\");
+                    </script>
+                    ";
+                }
+            }
+        }  
+    }
 
 ?>
 

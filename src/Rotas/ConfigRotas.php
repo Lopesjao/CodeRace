@@ -2,7 +2,7 @@
     include_once __DIR__ .'/Rotas.php';
 
     Rotas::add('/', 'View/Teste.php');
-    Rotas::add('/Home', 'View/Home.php');
+    Rotas::add('/Home', 'View/TelaHome.php');
 
     Rotas::add('/Login', 'View/TelaLogin.php');
     Rotas::add('/Cadastro', 'View/TelaCadastro.php');
