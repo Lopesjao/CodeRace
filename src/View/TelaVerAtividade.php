@@ -1,5 +1,8 @@
 <?php
     include_once __DIR__ . '/../Rotas/Constantes.php';
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,10 +44,19 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <?php if(isset($_SESSION["idUser"])): ?>
+                                <li class="nav-item"><a class="nav-link active" href="<?=HOME?>VerAtividade">Atividades</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?=HOME?>Sobre">Sobre nós</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?=HOME?>Contato">Contato</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?=HOME?>Perfil">Perfil</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?=HOME?>Sair">Sair</a></li>
+                            <?php endif; ?>
+                            <?php if(!isset($_SESSION["idUser"])): ?>
                             <li class="nav-item"><a class="nav-link" href="<?=HOME?>Sobre">Sobre nós</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?=HOME?>Contato">Contato</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?=HOME?>Login">Logar</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?=HOME?>Cadastro">Cadastrar</a></li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
