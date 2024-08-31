@@ -2,6 +2,10 @@
 
 include_once __DIR__ . '/../Rotas/Constantes.php';
 
+if(isset($_POST['Cadastrar'])){
+
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     include_once __DIR__ . '/../Conexao/Conexao.php';
@@ -15,11 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user ->setSenha($_POST['senha']);
     $user ->setDataNasc($_POST['dataNasc']);
 
-    $count;
-    $count + $_POST['celular'];
-    $count + $_POST['tv'];
-    $count + $_POST['pc'];
-    $count + $_POST['game'];
+    $count = 0;
+    $count += $_POST['celular'];
+    $count += $_POST['tv'];
+    $count += $_POST['pc'];
+    $count += $_POST['game'];
 
     $tipograu;
 
@@ -32,6 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $user -> setGrauVicio($tipograu);
+    $daouser -> insertUser($user);
+    echo "<h1> H1 </h1>";
+    /*
     $boolean = $daouser->selectUserVerfica($user->getEmail());
     if($boolean == "true"){
         echo "
@@ -43,13 +50,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }else if($boolean == "false"){
         $daouser -> insertUser($user);
         header("Location: ".HOME."home/Perfil");    
-    }
+    }*/
     
 
 
 
 }
-
+}
 
 ?>
 
@@ -60,6 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -70,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="container">
     <div class="form-container">
             <h2>Cadastro sei la</h2>
-            <form action="#" method="post">
+            <form action="<?=HOME?>Questionario" method="post">
 
                 <label >Quantas horas por dia você passa em frente de um dispositivo movel:</label><br>
                 <input type="radio" name="celular" value="0" required>Não Uso<br/>

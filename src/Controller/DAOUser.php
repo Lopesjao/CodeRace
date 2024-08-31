@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ .'/../Model/user.php';
+include_once __DIR__ .'/../Model/User.php';
 include_once __DIR__ .'/../Conexao/Conexao.php';
 class DAOUser{
 
@@ -20,7 +20,7 @@ class DAOUser{
         return $pstmt;
     }
     public function selectUserVerfica($email){
-        $pstmt = $this->conexao->prepare("SELECT * FROM atividade WHERE email = ?");
+        $pstmt = $this->conexao->prepare("SELECT * FROM user WHERE email = ?");
         $pstmt->bindValue(1, $email);
         $pstmt->execute();
         if ($pstmt->rowCount() > 0) {
