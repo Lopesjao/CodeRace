@@ -47,12 +47,13 @@
         echo "<h1>ola";
         $user->setGrauVicio($tipograu);
         $boolean = $daouser->selectUserVerfica($user->getEmail());
+        $daouser->selectUserVerficaLogin($user->getEmail(), $user->getSenha());
 
         if ($boolean) {
             echo "<script>alert('Email já existente, por favor digite outro!'); window.location.href = '/CodeRace/Cadastro';</script>";
         } else {
             $daouser->insertUser($user);
-            header("Location: " . HOME . "VerAtividade");
+            header("Location: " . HOME . "Login");
         }
     }
 ?>
