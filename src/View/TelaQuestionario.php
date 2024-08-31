@@ -13,16 +13,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include_once __DIR__ .'/../Controller/DAOUser.php';
     $user = new User();
     $daouser = new DAOUser();
-    echo "<h1>".$_POST['nome']."</h1>";
-    echo "<h1>".$_POST['email']."</h1>";
-    echo "<h1>".$_POST['senha']."</h1>";
-    echo "<h1>".$_POST['dataNasc']."</h1>";
 
     $user ->setNome($_POST['nome']);
     $user ->setEmail($_POST['email']);
     $user ->setSenha($_POST['senha']);
     $user ->setDataNasc($_POST['dataNasc']);
+    $teste = 1;
 
+    }
+
+
+    if (isset($_POST['Cadastrar'])){
+
+   
     $count;
     $count + $_POST['celular'];
     $count + $_POST['tv'];
@@ -55,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: ".HOME."home/Perfil");    
         }
     }
-    
+}
 
 
 
