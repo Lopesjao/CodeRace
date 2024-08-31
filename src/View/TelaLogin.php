@@ -1,6 +1,6 @@
 <?php
-
     
+
 ?>
 
 <!DOCTYPE html>
@@ -16,47 +16,43 @@
 <body>
     <div class="container">
 
-    <br>
+        <br>
 
-<div class="container" style="width: 40%;">
-<form align="center" method="POST" action="TelaLogin.php">
-    <h2>LOGIN</h2>
-    <br>
-    <label for="apelido"> Apelido </label>
-    <input 
-        type="text" 
-        name="apelido" 
-        id="apelido" 
-        class="form-control" 
-        pattern="[A-Za-z-0-9., -]{4,255}$"
-        oninvalid="setCustomValidity('Por favor, insira pelo menos 4 letras!')">
+        <div class="container" style="width: 40%;">
+            <form align="center" method="POST" action="TelaLogin.php">
+                <h2>LOGIN</h2>
+                <br>
+                <label for="email"> Email </label>
+                <input 
+                    type="text" 
+                    name="email" 
+                    id="email" 
+                    class="form-control">
 
-    <br>
+                <br>
 
-    <label for="senha"> Senha </label>
-    <input 
-        type="password" 
-        id="senha" 
-        name="senha" 
-        class="form-control" 
-        pattern="^.{6,15}$"
-        title="Senha com no minímo 6 caracteres de letras e números">
-                                    
-    <br>
+                <label for="senha"> Senha </label>
+                <input 
+                    type="password" 
+                    id="senha" 
+                    name="senha" 
+                    class="form-control">
+                                                
+                <br>
 
-    <label> <a href="TelaCadUser.php"> Não possui cadastro? </a> </label> 
-    <br><br>
-    <button 
-        type="submit" 
-        name="cadastrar" 
-        class="btn btn-primary"
-        >Entrar</button>
-</form>
-
-</div>
+                <label> <a href="TelaCadastro.php"> Não possui cadastro? </a> </label> 
+                <br><br>
+                <button 
+                    type="submit" 
+                    name="cadastrar" 
+                    class="btn btn-primary"
+                    >Entrar</button>
+            </form>
+        </div>
+    </div>
 
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 </body>
 </html>
