@@ -30,6 +30,27 @@ class DAOUser{
         }
     }
 
+    public function selectUserVerficaLogin($email, $senha){
+        // Verifica se o email existe
+        $pstmt = $this->conexao->prepare("SELECT * FROM user WHERE email = ?");
+        $pstmt->bindValue(1, $email);
+        $pstmt->execute();
+    
+        if ($pstmt->rowCount() > 0) {
+            // Se o email existe, verificar a senha
+            $user = $pstmt->fetch(PDO::FETCH_ASSOC);
+            
+            // Use password_verify para comparar a senha
+            if ($senha == $user['senha']) {
+                return true; // Login bem-sucedido
+            } else {
+                return "senha_incorreta"; // Senha incorreta
+            }
+        } else {
+            return "email_nao_encontrado"; // Email não encontrado
+        }
+    }
+
     public function selectAllUser(){
         $pstmt = $this->conexao->prepare("SELECT * FROM user");
         $pstmt->execute();

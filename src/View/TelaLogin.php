@@ -7,8 +7,17 @@
         session_start();
     }
     if (isset($_POST['entrar'])) {
-       echo $_POST['senha'];
-       echo $_POST['email'];
+        $daouser1 = new DAOUser();
+        $loginStatus = $daouser1->selectUserVerficaLogin($_POST['email'], $_POST['senha']);
+    
+        if ($loginStatus === true) {
+            // Login bem-sucedido
+            header("Location: " . HOME . "VerAtividade");
+        } else if ($loginStatus === "senha_incorreta") {
+            echo "<script>alert('Senha incorreta!'); window.location.href = '/CodeRace/Login';</script>";
+        } else if ($loginStatus === "email_nao_encontrado") {
+            echo "<script>alert('Email não encontrado!'); window.location.href = '/CodeRace/Login';</script>";
+        }
     }
 
 ?>
