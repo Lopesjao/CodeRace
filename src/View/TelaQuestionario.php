@@ -9,17 +9,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include_once __DIR__ .'/../Controller/DAOUser.php';
     $user = new User();
     $daouser = new DAOUser();
+    echo "<h1>".$_POST['nome']."</h1>";
+    echo "<h1>".$_POST['email']."</h1>";
+    echo "<h1>".$_POST['senha']."</h1>";
+    echo "<h1>".$_POST['dataNasc']."</h1>";
 
     $user ->setNome($_POST['nome']);
     $user ->setEmail($_POST['email']);
     $user ->setSenha($_POST['senha']);
     $user ->setDataNasc($_POST['dataNasc']);
 
-    $count;
-    $count + $_POST['celular'];
-    $count + $_POST['tv'];
-    $count + $_POST['pc'];
-    $count + $_POST['game'];
+    $count=0;
+    $count += $_POST['celular'];
+    $count += $_POST['tv'];
+    $count += $_POST['pc'];
+    $count += $_POST['game'];
 
     $tipograu;
 
@@ -34,19 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user -> setGrauVicio($tipograu);
     $daouser -> insertUser($user);
     $boolean = $daouser->selectUserVerfica($user->getEmail());
-    if($boolean == "true"){
-        echo "
-    <script type=\"text/javascript\">
-        alert('Email já existente, por favor digite outro!');
-        window.location.href = '<?=HOME?>Cadastro';  // Coloque a URL para onde deseja redirecionar
-    </script>
-    ";
-    }else {
-        if($boolean == "false"){
-            $daouser -> insertUser($user);
-            header("Location: ".HOME."home/Perfil");    
-        }
-    }
+    
     
 
 
