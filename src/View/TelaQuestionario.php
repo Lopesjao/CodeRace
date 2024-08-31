@@ -1,8 +1,5 @@
 <?php
 include_once __DIR__ . '/../Rotas/Constantes.php';
-include_once __DIR__ . '/../Conexao/Conexao.php';
-include_once __DIR__ . '/../Model/user.php';
-include_once __DIR__ . '/../Controller/DAOUser.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = new User();
@@ -14,47 +11,66 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user->setSenha($_POST['senha']);
     $user->setDataNasc($_POST['dataNasc']);
 
-    // Verificação de email já existente
-    if ($daouser->selectUserVerfica($user->getEmail())) {
-        echo "
-        <script type=\"text/javascript\">
-            alert('Email já existente, por favor digite outro!');
-            window.location.href = '<?=HOME?>Cadastro';  
-        </script>
-        ";
-    } else {
-        // Questionário para calcular grau de vício
-        $count = $_POST['celular'] + $_POST['tv'] + $_POST['pc'] + $_POST['game'];
+    $count;
+    $count + $_POST['celular'];
+    $count + $_POST['tv'];
+    $count + $_POST['pc'];
+    $count + $_POST['game'];
 
-        $tipograu = $count <= 20 ? "Baixo" : ($count <= 50 ? "Moderado" : "Alto");
-        $user->setGrauVicio($tipograu);
+    $tipograu;
 
-        // Inserção do novo usuário
-        $daouser->insertUser($user);
-        header("Location: " . HOME . "home/Perfil");
+    if($count <= 20 ){
+        $tipograu = "Baixo";
+    } else if( $count <=50 ) {
+        $tipograu = "Moderado";
+    }else{
+        $tipograu = "Alto";
     }
+
+    $user -> setGrauVicio($tipograu);
+    $boolean = $daouser->selectUserVerfica($user->getEmail());
+    if($boolean == "true"){
+        echo "
+    <script type=\"text/javascript\">
+        alert('Email já existente, por favor digite outro!');
+        window.location.href = '<?=HOME?>Cadastro';  // Coloque a URL para onde deseja redirecionar
+    </script>
+    ";
+    }else if($boolean == "false"){
+        $daouser -> insertUser($user);
+        header("Location: ".HOME."home/Perfil");    
+    }
+    
+
+
+
 }
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Questionário Cadastro</title>
 </head>
 <body>
 <div class="container">
     <div class="form-container">
-        <h2>Questionário</h2>
-        <form action="#" method="post">
-            <label>Quantas horas por dia você passa em um dispositivo móvel?</label><br>
-            <input type="radio" name="celular" value="0" required>Não Uso<br/>
-            <input type="radio" name="celular" value="5" required>Menos de 2 horas<br/>
-            <input type="radio" name="celular" value="10" required>2-4 horas<br/>
-            <input type="radio" name="celular" value="15" required>4-6 horas<br/>
-            <input type="radio" name="celular" value="20" required>Mais de 6 horas<br/>
+            <h2>Cadastro sei la</h2>
+            <form action="#" method="post">
+
+                <label >Quantas horas por dia você passa em frente de um dispositivo movel:</label><br>
+                <input type="radio" name="celular" value="0" required>Não Uso<br/>
+                <input type="radio" name="celular" value="5" required>Menos de 2 horas<br/>
+                <input type="radio" name="celular" value="10" required>2-4 horas<br/>
+                <input type="radio" name="celular" value="15" required>4-6 horas<br/>
+                <input type="radio" name="celular" value="20" required>Mais de 6 horas<br/>
 
             <label >Quantas horas por dia você passa em frente de uma Televisão:</label><br>
                 <input type="radio" name="tv" value="0" required>Não Uso<br/>
