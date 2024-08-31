@@ -71,6 +71,28 @@ body {
         text-decoration: none;
         color: #000000;
     }
+  
+  .diretorio {
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    text-align: center;
+  }
+  
+  .diretorio img {
+    width: 1000px; 
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+  }
+  
+  .diretorio img:hover {
+    transform: scale(1.05);
+  }
     </style>
 </head>
 <body>
@@ -98,9 +120,9 @@ body {
         </header>
     </section>
 
-    <div class="container">
-        <div class="main-content">
-            <div class="container" style="width: 70%;">
+        <div class="container">
+            <div class="diretorio" style="width: 50%;">
+                <br><br>
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -108,26 +130,22 @@ body {
                         </div>
                     </div>
                 </div>
-            </div>
 
             <br>
+            <div class="container">
+            <div class="main-content"> 
+                <h1>Ajudamos você a se <span class="corverde">desconectar</span> para (re)<span class="corverde">Conectar</span> com o mais importante... sua <span class="corazul">vida</span></h1> <p>Nós entendemos a importância do equilíbrio entre o uso da tecnologia e a vida pessoal. O OnLife foi criado para auxiliar pessoas a diminuírem seu tempo de tela, promovendo uma conexão mais saudável com o mundo ao seu redor. Estamos aqui para ajudar você a reconquistar momentos significativos fora das telas digitais.</p> </div>
 
-            <div class="main-content"> <h1>Ajudamos você a se <span class="corverde">desconectar</span> para (re)<span class="corverde">Conectar</span> com o mais importante... sua <span class="corazul">vida</span></h1> <p>Nós entendemos a importância do equilíbrio entre o uso da tecnologia e a vida pessoal. O OnLife foi criado para auxiliar pessoas a diminuírem seu tempo de tela, promovendo uma conexão mais saudável com o mundo ao seu redor. Estamos aqui para ajudar você a reconquistar momentos significativos fora das telas digitais.</p> </div>
+                <br>
 
-            <br>
+                <div id="msg">
+                    <p class="quote">Citação do dia</p>
+                    <p class="quote">A persistência é o caminho do êxito.</p>
+                    <p class="quote-author">Charles Chaplin</p>
+                </div>
 
-            <div id="msg">
-                <p class="quote">Citação do dia</p>
-                <p class="quote">A persistência é o caminho do êxito.</p>
-                <p class="quote-author">Charles Chaplin</p>
             </div>
-
         </div>
-    </div>
-
-    <footer>
-        <span>Copyright 2024</span>
-    </footer>
     
     <script src="<?=HOME?>src/View/JavaScript/JavaScriptComandos.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
