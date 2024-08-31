@@ -22,7 +22,7 @@
         .logo {
             font-size: 32px;
             font-weight: bold;
-            color: #000000;
+            color: #00b0f0;
         }
 
         .logo span {
@@ -92,7 +92,7 @@
                             <li class="nav-item"><a class="nav-link" href="TelaCadCompanhia.php">Sobre nós</a></li>
                             <li class="nav-item"><a class="nav-link" href="TelaCadOnibus.php">Contato</a></li>
                             <li class="nav-item"><a class="nav-link" href="TelaLogin.php">Logar</a></li>
-                            <li class="nav-item"><a class="nav-link" href="TelaCadUser.php">Cadastrar</a></li>
+                            <li class="nav-item"><a class="nav-link" href="TelaCadastro.php">Cadastrar</a></li>
                         </ul>
                     </div>
                 </div>
