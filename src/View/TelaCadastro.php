@@ -55,7 +55,9 @@
     </section>
 
     <div class="container">
-        <br>
+
+    <br>
+
         <div class="container" style="width: 60%;">
             <form align="center" action="<?=HOME?>Questionario" method="post">
                 <h2>CADASTRO</h2>
