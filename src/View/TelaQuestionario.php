@@ -32,12 +32,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $user -> setGrauVicio($tipograu);
+    $boolean = $daouser->selectUserVerfica($user->getEmail());
+    if($boolean == "true"){
+        echo "
+    <script type=\"text/javascript\">
+        alert('Email já existente, por favor digite outro!');
+        window.location.href = '<?=HOME?>Cadastro';  // Coloque a URL para onde deseja redirecionar
+    </script>
+    ";
+    }else if($boolean == "false"){
+        $daouser -> insertUser($user);
+        header("Location: ".HOME."home/Perfil");    
+    }
     
-    $conexao = new Conexao();
-        $conexao = $conexao->conexao();
-        $stmt = $conexao->prepare('SELECT * FROM usuario WHERE email = "'.$email.'"');
-        $stmt->execute();
-		$count = $stmt->rowCount();
 
 
 

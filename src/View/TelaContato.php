@@ -68,18 +68,14 @@
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3">
                 <form>
-                    <div class="form-group">
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control" id="nome" placeholder="Seu nome">
-                    </div>
-                    <div class="form-group">
+                        <br>
                         <label for="email">E-mail</label>
                         <input type="email" class="form-control" id="email" placeholder="Seu e-mail">
-                    </div>
-                    <div class="form-group">
+                        <br>
                         <label for="mensagem">Mensagem</label>
                         <textarea class="form-control" id="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
-                    </div>
                     <br>
                     <button type="submit" class="btn btn-primary btn-block">Enviar</button>
                 </form>

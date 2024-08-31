@@ -7,7 +7,7 @@ class DAOUser{
         public function __construct(){
             $this->conexao = Conexao::getConexao();
         }
-    public function insertAnotacao(User $user){
+    public function insertUser(User $user){
         $pstmt = $this->conexao->prepare("INSERT INTO user 
         (nome, dataNasc, senha, email, grauVicio) VALUES 
         (?,?,?,?,?)");
@@ -18,6 +18,16 @@ class DAOUser{
         $pstmt->bindValue(5, $user->getGrauVicio());
         $pstmt->execute();
         return $pstmt;
+    }
+    public function selectUserVerfica($email){
+        $pstmt = $this->conexao->prepare("SELECT * FROM atividade WHERE email = ?");
+        $pstmt->bindValue(1, $email);
+        $pstmt->execute();
+        if ($pstmt->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
