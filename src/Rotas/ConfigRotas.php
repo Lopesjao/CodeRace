@@ -8,8 +8,8 @@
     Rotas::add('/Atividade', 'View/TelaAtividade.php');
     Rotas::add('/VerAtividade', 'View/TelaVerAtividade.php');
 
-
-
+    
+    Rotas::add('/Cadastro', '/CodeRace/src/View/TelaCadastro.php');
     Rotas::add('/Login', 'View/TelaLogin.php');
     Rotas::add('/Cadastro', 'View/TelaCadastro.php');
     Rotas::add('/Questionario', 'View/TelaQuestionario.php');
@@ -20,7 +20,7 @@
     Rotas::add('/Graficos', 'View/Graficos.php');
     Rotas::add('/GerarPDF', 'View/Gera_PDF.php');
     Rotas::add('/Resposta', 'View/Gerar_pdf.php');
-    Rotas::add('/teste', 'View/teste.php');
+    Rotas::add('/teste', 'View/Teste.php');
     Rotas::add('/Anotacao_Historico', 'View/AnotacaoHist.php');
     Rotas::addGetInt('/Anotacao', 'View/Anotacao.php', 'IdDado');
     Rotas::addGet('/controller', 'Controller/FunctionController.php', 'function');
