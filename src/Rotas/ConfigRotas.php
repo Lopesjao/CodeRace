@@ -11,6 +11,7 @@
     Rotas::add('/Along', 'View/TelaAlong.php');
     Rotas::add('/Livro', 'View/TelaLivro.php');
     Rotas::add('/TesteAtividade', 'View/TesteAtividade.php');
+    Rotas::add('/Loja', 'View/TelaLoja.php');
 
     
     Rotas::add('/Cadastro', '/CodeRace/src/View/TelaCadastro.php');

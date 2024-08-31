@@ -52,7 +52,10 @@
                                 <li class="nav-item"><a class="nav-link" href="<?=HOME?>VerAtividade">Atividades</a></li>
                                 <li class="nav-item"><a class="nav-link" href="<?=HOME?>Sobre">Sobre nós</a></li>
                                 <li class="nav-item"><a class="nav-link active" href="<?=HOME?>Contato">Contato</a></li>
+                              
+                              
                                 <li class="nav-item"><a class="nav-link" href="<?=HOME?>Perfil">Perfil</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?=HOME?>Loja">Loja</a></li>
                                 <li class="nav-item"><a class="nav-link" href="<?=HOME?>Sair">Sair</a></li>
                             <?php endif; ?>
                             <?php if(!isset($_SESSION["idUser"])): ?>
