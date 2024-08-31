@@ -1,7 +1,7 @@
 <?php
     include_once __DIR__ .'/Rotas.php';
 
-    Rotas::add('/', 'View/Home.php');
+    Rotas::add('/', 'View/Teste.php');
     Rotas::add('/Home', 'View/Home.php');
     Rotas::add('/Graficos', 'View/Graficos.php');
     Rotas::add('/GerarPDF', 'View/Gera_PDF.php');
